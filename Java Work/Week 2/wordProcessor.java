@@ -1,7 +1,20 @@
 public class wordProcessor implements Counter{
 
+    private String text;
+
+    public String getText() {
+        return text;
+    }
+
+    public void setName(String newText){
+        this.text = newText;
+    }
+
     @Override
     public int countWords(String sentence) {
+        if (sentence == null){
+            return text;
+        }
         int i = 0;
         String[] CWords = sentence.split(" ");
         for (String s: CWords) {
