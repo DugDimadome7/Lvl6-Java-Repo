@@ -12,9 +12,6 @@ public class wordProcessor implements Counter{
 
     @Override
     public int countWords(String sentence) {
-        if (sentence == null){
-            return text;
-        }
         int i = 0;
         String[] CWords = sentence.split(" ");
         for (String s: CWords) {
