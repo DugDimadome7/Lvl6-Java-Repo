@@ -1,15 +1,20 @@
 import java.util.Random;
 
-
 public class Driver3 {
 	public static void main(String[] args) {
+		// Final int used to keep list of numbers at 10.
 		final int VALUES = 10;
 
-		Stats stats = new Stats(VALUES);
+		//Sets up the stats constructor using final VALUES as its parameter.
+        Stats stats = new Stats(VALUES);
 
 		Random random = new Random();
-		
-		for (int i = 0; i < VALUES; i++) {
+
+		/*
+		Iterates over each index in the constructed stats array, until it reaches VALUES,
+		adds random value to each index in the stats array.
+		 */
+        for (int i = 0; i < VALUES; i++) {
 			stats.addValue(random.nextInt(100));
 				}
 
@@ -23,8 +28,8 @@ public class Driver3 {
 
 		System.out.println("Total = " + stats.getTotal());
 
-		System.out.println("Minimum value = " + stats.getB());
+		System.out.println("Minimum value = " + stats.getMaximum());
 
-		System.out.println("Maximum value = " + stats.getA());
+		System.out.println("Maximum value = " + stats.getMinimum());
 	}
 }
